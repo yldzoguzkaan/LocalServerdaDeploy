@@ -1,1 +1,7 @@
-# LocalServerdaDeploy
+= LocalServerdaDeploy
+  Bilindiği üzere web sitelerinde html komutlarını tarayıcılar çalıştırmaktadır ve bu html komutları için sunuculara ihtiyaç yoktur. Yapılan web siteleri sadece html komutlarından oluşmadığı için web sunucu mantığı geliştirilmiştir. Web sunucuları ve web dili bilen ve yorumlayan, sonucu döndüren yapılardır. Bir web sitesi yapım aşamasında iken sunucuyla otantike halde çalışılması zor olacağından yerel sunuculara ihtiyaç duyulmuştur. Yerel sunucu kişisel bilgisayarlarda çalışma adına geliştirilen, http, https, ftp, smtp vs. protokollerini içinde barındıran yapılardır. Birçok yerel sunucu hizmeti vermeyi sağlayan programlar vardır. Burada önemli olan hangi dili kullandığınızdır. Örneğin PHP web dili kullanıyorsanız TOMCAT, XAMPP vs. yerel sunucu hizmeti veren yapıları, yada daha spesifik bir dil olan Microsoft'un ASP sini kullanıyorsanız IIS e ihtiyacınız vardır.
+  Biz projemizde PHP web dilini kullandığımız için XAMPP yerel sunucusunu kullanacağız.
+  
+==XAMPP KURULUMU
+1) https://www.apachefriends.org/tr/download.html linkinden, xampp dosyası bilgisayarınızın sistem türüne göre indirilir.
+2) İndirilen dosya kurulum için tıklanır. 
