@@ -1,3 +1,4 @@
+
 = YEREL SUNUCUDA DEPLOY İŞLEMİ
 
 *1.İçindekiler* +
@@ -36,7 +37,7 @@
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/1.jpg[] 
   
 4) Burada yerel sunucu yapılandırılırken database, e-posta ve dosya transfer işlemleri yapma becerisinin seçilmesi gerekir. Apache sunucusu olduğu için PHP varsayılan olarak seçili gelmektedir. 
-  
+
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/2.jpg[] 
   
 5) Burada yerel sunucunun dizini belirlenir. Bu çok önemlidir. Deploy işlemlerinde web dosyalarımız yerel sunucu dizininde tutulması gerekmektedir. 
@@ -75,6 +76,7 @@ image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/10.jpg[]
 
 4)
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/11.jpg[] 
+
 6.Kök Dizin +
 Resimde de görüldüğü üzere XAMPP ı kurduğumuzda belirttiğimiz dizinin altında, kendi adında bir yığın oluşturulmakta. Bu yığının içerisinde ise içinde barındırdığı uygulamalar için dizinler oluşturmaktadır. Burada local sunucumuz "\htdocs" dizinidir. +
 C:\xampp\htdocs 
