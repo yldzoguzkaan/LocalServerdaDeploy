@@ -51,6 +51,7 @@ image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/4.jpg[]
 
 7) 
 
+
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/5.jpg[] 
   
 8)
