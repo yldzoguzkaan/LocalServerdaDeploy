@@ -45,6 +45,7 @@ image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/3.jpg[]
   
 6) 
 
+
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/4.jpg[] 
 
 7) 
@@ -81,7 +82,8 @@ C:\xampp\htdocs
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/12.jpg[]
 
 7.Deploy +
-Yerel sunucumuzun deploy dizinine, web sitemizin klasörünü taşıdığımızda deploy işlemi gerçekleşmiş olmaktadır. Geriye kalan sadece yönetim panelinden web sitemizin klasörünü çağırma işlemi kalmakta. +
+Yerel sunucumuzun deploy dizinine, web sitemizin klasörünü taşıdığımızda deploy işlemi gerçekleşmiş olmaktadır. Geriye kalan sadece yönetim panelinden web sitemizin klasörünü çağırma işlemi kalmakta. 
+
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/13.jpg[] 
 
 8.Veritabanı Yönetimi +
