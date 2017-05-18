@@ -63,7 +63,7 @@ image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/6.jpg[]
 
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/7.jpg[]
 
-5.Hatalar +
+*5.Hatalar* +
 1) Apache sunucu hizmeti ilk başlatıldığında genelde resimdeki gibi hatayla karşılaşılmaktadır. Bunun sebebi, kişisel bilgisayara daha önceden yüklenen oyun, program vs. uygulamalarında http yada https portları üstünden haberleşmesidir. Aslında genel problem şudur ki aynı anda tüm uygulamalar http ve https portunu kullanabilir fakat biz XAMPP ile bu portların kontrolünü aldığımız için işletim sistemi izin vermemektedir. Bu hatayı aşmak için, aşağıdaki resimlerde görüldüğü gibi yerel sunucumuzun http ve https portlarını başka portlar üzerinden sağlamaktayız. http ve https servislerinin ayar dosyasına girilmektedir. 
   
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/8.jpg[] 
@@ -80,18 +80,18 @@ image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/10.jpg[]
 
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/11.jpg[] 
 
-6.Kök Dizin +
+*6.Kök Dizin* +
 Resimde de görüldüğü üzere XAMPP ı kurduğumuzda belirttiğimiz dizinin altında, kendi adında bir yığın oluşturulmakta. Bu yığının içerisinde ise içinde barındırdığı uygulamalar için dizinler oluşturmaktadır. Burada local sunucumuz "\htdocs" dizinidir. +
 C:\xampp\htdocs 
 
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/12.jpg[]
 
-7.Deploy +
+*7.Deploy* +
 Yerel sunucumuzun deploy dizinine, web sitemizin klasörünü taşıdığımızda deploy işlemi gerçekleşmiş olmaktadır. Geriye kalan sadece yönetim panelinden web sitemizin klasörünü çağırma işlemi kalmakta. 
 
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/13.jpg[] 
 
-8.Veritabanı Yönetimi +
+*8.Veritabanı Yönetimi* +
 1) Yerel sunucu yönetim panelinden, veritabanı yönetim paneli açılmakta ve web sitesinin veritabanı oluşturulmaktadır.
 
 image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/14.jpg[] 
