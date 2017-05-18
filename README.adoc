@@ -1,3 +1,4 @@
+
 = YEREL SUNUCUDA DEPLOY İŞLEMİ
 
 *1.İçindekiler* +
@@ -29,44 +30,68 @@
   Biz projemizde PHP web dilini kullandığımız için XAMPP yerel sunucusunu kullanacağız. +
   
 *4.XAMPP KURULUMU* +
-  1) https://www.apachefriends.org/tr/download.html linkinden, xampp dosyası bilgisayarınızın sistem türüne göre indirilir. +
-  2) İndirilen dosya kurulum için tıklanır. +
-  3) +
-  img::1.jpg[] + 
-  4) Burada yerel sunucu yapılandırılırken database, e-posta ve dosya transfer işlemleri yapma becerisinin seçilmesi gerekir. Apache sunucusu olduğu için PHP varsayılan olarak seçili gelmektedir. +
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/2.jpg[] 
-  5) Burada yerel sunucunun dizini belirlenir. Bu çok önemlidir. Deploy işlemlerinde web dosyalarımız yerel sunucu dizininde tutulması gerekmektedir. +
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/3.jpg[] 
-  6) + 
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/4.jpg[] 
-  7) +
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/5.jpg[] 
-  8) +
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/6.jpg[] 
-  9) Burada XAMPP ın yönetim paneli görünmektedir. Başlat-Bitir, Yönetici Paneline erişim, Ayarlamalar ve Sistem Kayıt menülerine buradan ulaşılmaktadır. Ek olarak Yönetim Paneli tüm yerel sunucuları yönetebilmektedir. Harici bir yerel sunucu kurulduğunda yönetim paneline yapılacak birkaç ayarla yönetilir hale getirilmektedir. +
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/7.jpg[]
+1) https://www.apachefriends.org/tr/download.html linkinden, xampp dosyası bilgisayarınızın sistem türüne göre indirilir. +
+2) İndirilen dosya kurulum için tıklanır. +
+3) 
+  
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/1.jpg[] 
+  
+4) Burada yerel sunucu yapılandırılırken database, e-posta ve dosya transfer işlemleri yapma becerisinin seçilmesi gerekir. Apache sunucusu olduğu için PHP varsayılan olarak seçili gelmektedir. 
+  
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/2.jpg[] 
+  
+5) Burada yerel sunucunun dizini belirlenir. Bu çok önemlidir. Deploy işlemlerinde web dosyalarımız yerel sunucu dizininde tutulması gerekmektedir. 
+  
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/3.jpg[] 
+  
+6) 
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/4.jpg[] 
+
+7) 
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/5.jpg[] 
+  
+8)
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/6.jpg[] 
+
+9) Burada XAMPP ın yönetim paneli görünmektedir. Başlat-Bitir, Yönetici Paneline erişim, Ayarlamalar ve Sistem Kayıt menülerine buradan ulaşılmaktadır. Ek olarak Yönetim Paneli tüm yerel sunucuları yönetebilmektedir. Harici bir yerel sunucu kurulduğunda yönetim paneline yapılacak birkaç ayarla yönetilir hale getirilmektedir. +
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/7.jpg[]
+
 5.Hatalar +
-  1) Apache sunucu hizmeti ilk başlatıldığında genelde resimdeki gibi hatayla karşılaşılmaktadır. Bunun sebebi, kişisel bilgisayara daha önceden yüklenen oyun, program vs. uygulamalarında http yada https portları üstünden haberleşmesidir. Aslında genel problem şudur ki aynı anda tüm uygulamalar http ve https portunu kullanabilir fakat biz XAMPP ile bu portların kontrolünü aldığımız için işletim sistemi izin vermemektedir. Bu hatayı aşmak için, aşağıdaki resimlerde görüldüğü gibi yerel sunucumuzun http ve https portlarını başka portlar üzerinden sağlamaktayız. http ve https servislerinin ayar dosyasına girilmektedir. +
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/8.jpg[] 
-  2) Dinlenilen port 80(http) yerine 8080 olarak değiştirilir. Burada yapılan işlem, bilindiği üzere networkün ikinci katmanında iletişim portlar üzerinden taşınmaktadır. 0 ile 1024 arası ise çok bilinen portlar olarak geçmektedir. Çok bilinen denmesinin sebebi ise http, ftp, skype, smtp gibi bilinen uygulama ve protokollere özel dağıtılmış olmasıdır. Sonuç olarak http ye atanan çok bilinen port local sunucumuzda çakışma ürettiği için az bilinen 8080 portunu atamaktayız. +
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/9.jpg[] 
-  3) Aynı işlemi, "gerekirse" https içinde yapmaktayız. + 
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/10.jpg[] 
-  4) +
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/11.jpg[] +
+1) Apache sunucu hizmeti ilk başlatıldığında genelde resimdeki gibi hatayla karşılaşılmaktadır. Bunun sebebi, kişisel bilgisayara daha önceden yüklenen oyun, program vs. uygulamalarında http yada https portları üstünden haberleşmesidir. Aslında genel problem şudur ki aynı anda tüm uygulamalar http ve https portunu kullanabilir fakat biz XAMPP ile bu portların kontrolünü aldığımız için işletim sistemi izin vermemektedir. Bu hatayı aşmak için, aşağıdaki resimlerde görüldüğü gibi yerel sunucumuzun http ve https portlarını başka portlar üzerinden sağlamaktayız. http ve https servislerinin ayar dosyasına girilmektedir. +
+  
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/8.jpg[] 
+
+2) Dinlenilen port 80(http) yerine 8080 olarak değiştirilir. Burada yapılan işlem, bilindiği üzere networkün ikinci katmanında iletişim portlar üzerinden taşınmaktadır. 0 ile 1024 arası ise çok bilinen portlar olarak geçmektedir. Çok bilinen denmesinin sebebi ise http, ftp, skype, smtp gibi bilinen uygulama ve protokollere özel dağıtılmış olmasıdır. Sonuç olarak http ye atanan çok bilinen port local sunucumuzda çakışma ürettiği için az bilinen 8080 portunu atamaktayız. +
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/9.jpg[] 
+3) Aynı işlemi, "gerekirse" https içinde yapmaktayız. 
+
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/10.jpg[] 
+
+4)
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/11.jpg[] 
 6.Kök Dizin +
-  Resimde de görüldüğü üzere XAMPP ı kurduğumuzda belirttiğimiz dizinin altında, kendi adında bir yığın oluşturulmakta. Bu yığının içerisinde ise içinde barındırdığı uygulamalar için dizinler oluşturmaktadır. Burada local sunucumuz "\htdocs" dizinidir. +
-  C:\xampp\htdocs + 
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/12.jpg[]
+Resimde de görüldüğü üzere XAMPP ı kurduğumuzda belirttiğimiz dizinin altında, kendi adında bir yığın oluşturulmakta. Bu yığının içerisinde ise içinde barındırdığı uygulamalar için dizinler oluşturmaktadır. Burada local sunucumuz "\htdocs" dizinidir. +
+C:\xampp\htdocs 
+
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/12.jpg[]
+
 7.Deploy +
-  Yerel sunucumuzun deploy dizinine, web sitemizin klasörünü taşıdığımızda deploy işlemi gerçekleşmiş olmaktadır. Geriye kalan sadece yönetim panelinden web sitemizin klasörünü çağırma işlemi kalmakta. +
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/13.jpg[] 
+Yerel sunucumuzun deploy dizinine, web sitemizin klasörünü taşıdığımızda deploy işlemi gerçekleşmiş olmaktadır. Geriye kalan sadece yönetim panelinden web sitemizin klasörünü çağırma işlemi kalmakta. +
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/13.jpg[] 
+
 8.Veritabanı Yönetimi +
-  1) Yerel sunucu yönetim panelinden, veritabanı yönetim paneli açılmakta ve web sitesinin veritabanı oluşturulmaktadır. +
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/14.jpg[] 
-  2) Bizim projemizde veritabanının içini doldurmak adına, dışarı çıkarılan sql cümlelerini eklememiz gerekmektedir. Bunun için aşağıdaki resimde veritabanı yönetim panelinden veritabanımızı seçip, sql inser işlemi yapılmaktadır. + 
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/15.jpg[] 
-  3) Aşağıdaki resimde sql inser işlemi kontrol edilmektedir. +
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/16.jpg[] 
-  4) Veritabanı işlemleri bittiğinden, aşağıdaki resimde deploy edilen web sitesi çağırılmaktadır. + 
-  image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/17.jpg[]
+1) Yerel sunucu yönetim panelinden, veritabanı yönetim paneli açılmakta ve web sitesinin veritabanı oluşturulmaktadır.
+
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/14.jpg[] 
+
+2) Bizim projemizde veritabanının içini doldurmak adına, dışarı çıkarılan sql cümlelerini eklememiz gerekmektedir. Bunun için aşağıdaki resimde veritabanı yönetim panelinden veritabanımızı seçip, sql inser işlemi yapılmaktadır. 
+
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/15.jpg[] 
+
+3) Aşağıdaki resimde sql inser işlemi kontrol edilmektedir. 
+
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/16.jpg[] 
+
+4) Veritabanı işlemleri bittiğinden, aşağıdaki resimde deploy edilen web sitesi çağırılmaktadır. 
+
+image::https://github.com/yldzoguzkaan/LocalServerdaDeploy/raw/master/17.jpg[]
