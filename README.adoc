@@ -1,6 +1,5 @@
 = YEREL SUNUCUDA DEPLOY İŞLEMİ
 
-
 *1.Giriş* +
   Bilindiği üzere web sitelerinde html komutlarını tarayıcılar çalıştırmaktadır ve bu html komutları için sunuculara ihtiyaç yoktur. Yapılan web siteleri sadece html komutlarından oluşmadığı için web sunucu mantığı geliştirilmiştir. Web sunucuları ve web dili bilen ve yorumlayan, sonucu döndüren yapılardır. Bir web sitesi yapım aşamasında iken sunucuyla otantike halde çalışılması zor olacağından yerel sunuculara ihtiyaç duyulmuştur. Yerel sunucu kişisel bilgisayarlarda çalışma adına geliştirilen, http, https, ftp, smtp vs. protokollerini içinde barındıran yapılardır. Birçok yerel sunucu hizmeti vermeyi sağlayan programlar vardır. Burada önemli olan hangi dili kullandığınızdır. Örneğin PHP web dili kullanıyorsanız TOMCAT, XAMPP vs. yerel sunucu hizmeti veren yapıları, yada daha spesifik bir dil olan Microsoft'un ASP sini kullanıyorsanız IIS e ihtiyacınız vardır. +
   Biz projemizde PHP web dilini kullandığımız için XAMPP yerel sunucusunu kullanacağız. +
@@ -9,7 +8,7 @@
   1) https://www.apachefriends.org/tr/download.html linkinden, xampp dosyası bilgisayarınızın sistem türüne göre indirilir. +
   2) İndirilen dosya kurulum için tıklanır. +
   3) +
-  image::1.jpg[Giriş,width=25%] +
+  image::1.jpg[width=25%] +
   4) Burada yerel sunucu yapılandırılırken database, e-posta ve dosya transfer işlemleri yapma becerisinin seçilmesi gerekir. Apache sunucusu olduğu için PHP varsayılan olarak seçili gelmektedir. +
   image::2.jpg[Giriş,width=25%] +
   5) Burada yerel sunucunun dizini belirlenir. Bu çok önemlidir. Deploy işlemlerinde web dosyalarımız yerel sunucu dizininde tutulması gerekmektedir. +
@@ -35,3 +34,15 @@
   Resimde de görüldüğü üzere XAMPP ı kurduğumuzda belirttiğimiz dizinin altında, kendi adında bir yığın oluşturulmakta. Bu yığının içerisinde ise içinde barındırdığı uygulamalar için dizinler oluşturmaktadır. Burada local sunucumuz "\htdocs" dizinidir. +
   C:\xampp\htdocs + 
   image::12.jpg[Giriş,width=25%] +
+*5.Deploy* +
+  Yerel sunucumuzun deploy dizinine, web sitemizin klasörünü taşıdığımızda deploy işlemi gerçekleşmiş olmaktadır. Geriye kalan sadece yönetim panelinden web sitemizin klasörünü çağırma işlemi kalmakta. +
+  image::13.jpg[Giriş,width=25%] +
+*6.Veritabanı Yönetimi* +
+  1) Yerel sunucu yönetim panelinden, veritabanı yönetim paneli açılmakta ve web sitesinin veritabanı oluşturulmaktadır. +
+  image::14.jpg[Giriş,width=25%] +
+  2) Bizim projemizde veritabanının içini doldurmak adına, dışarı çıkarılan sql cümlelerini eklememiz gerekmektedir. Bunun için aşağıdaki resimde veritabanı yönetim panelinden veritabanımızı seçip, sql inser işlemi yapılmaktadır. + 
+  image::15.jpg[Giriş,width=25%] +
+  3) Aşağıdaki resimde sql inser işlemi kontrol edilmektedir. +
+  image::16.jpg[Giriş,width=25%] +
+  4) Veritabanı işlemleri bittiğinden, aşağıdaki resimde deploy edilen web sitesi çağırılmaktadır. + 
+  image::17.jpg[Giriş,width=25%] +
